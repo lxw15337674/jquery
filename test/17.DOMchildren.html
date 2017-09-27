@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../otherbasic/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").children().css({"color":"red","border":"2px solid red"});
+            $("div").find("span").css({"color":"red","border":"2px solid red"});
+
+        })
+    </script>
+    <style>
+        .a *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a" style="width:500px;">
+        div（当前元素）
+        <p>p（子）
+        <span>span(同胞孙）</span>
+    </p>
+        <p>p(同胞child)
+        <span>span(孙)</span></p>
+    </div>
+</body>
+</html>

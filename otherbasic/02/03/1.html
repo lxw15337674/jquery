@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr{
+            background-color: #ffffff;
+        }
+        .alt{
+            background-color: #cccccc;
+        }
+
+    </style>
+    <script src="../../jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('tr:nth-child(odd)').addClass('alt');
+            $('td:contains(Henry)').addClass('bold');
+            $('input').css('background-color','red');
+            $('input:disabled').css('background-color','blue')
+            $('a').filter(function () {
+                return this.hostname && this.hostname != location.hostname;
+            }).addClass('external');
+            $('td:contains(Henry)').nextAll().addBack()
+                .css('background-color','yellow')
+        });
+    </script>
+
+</head>
+<body>
+<h2>Shakespeare's Plays</h2>
+<table>
+    <tr>
+        <td>As You Like It</td>
+        <td>Comedy</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>All's Well that Ends Well</td>
+        <td>Comedy</td>
+        <td>1601</td>
+        <input disabled="disabled" value="233">
+        <input value="lol">
+
+    </tr>
+    <tr>
+        <td>Hamlet</td>
+        <td>Tragedy</td>
+        <td>1604</td>
+    </tr>
+    <tr>
+        <td >Macbeth</td>
+        <td>Tragedy</td>
+        <td>1606</td>
+    </tr>
+    <tr>
+        <td>Romeo and Juliet</td>
+        <td>Tragedy</td>
+        <td>1595</td>
+    </tr>
+    <tr>
+        <td>Henry IV, Part I</td>
+        <td>History</td>
+        <td>1596</td>
+    </tr>
+    <tr>
+        <td>Henry V</td>
+        <td>History</td>
+        <td>1599</td>
+    </tr>
+    <tr>
+        <td>Henry 2</td>
+        <td>History</td>
+        <td>1599</td>
+    </tr>
+    <tr>
+        <td>Henry 3</td>
+        <td>History</td>
+        <td>1599</td>
+    </tr>
+</table>
+<h2>Shakespeare's Sonnets</h2>
+<table>
+    <tr>
+        <td>The Fair Youth</td>
+        <td>1–126</td>
+    </tr>
+    <tr>
+        <td>The Dark Lady</td>
+        <td>127–152</td>
+    </tr>
+    <tr>
+        <td>The Rival Poet</td>
+        <td>78–86</td>
+    </tr>
+</table>
+</body>
+</html>

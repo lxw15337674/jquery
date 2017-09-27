@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="../otherbasic/jquery-3.2.1.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $('h2').siblings().css({"color":"red","border":"2px solid red"})
+            });
+            $("#btn2").click(function () {
+                $('h2').next().css({"color":"blue","border":"2px solid red"})
+            });
+            $("#btn3").click(function () {
+                $('h2').nextAll().css({"color":"blue","border":"2px solid red"})
+            })
+        })
+    </script>
+</head>
+<body>
+<div>div (父)
+    <p>p</p>
+    <span>span</span>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <p>p</p>
+</div>
+<button id="btn1">sibings</button>
+<button id="btn2">next</button>
+<button id="btn3">nextAll</button>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../otherbasic/jquery-3.2.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("h1,h2,p").addClass('blue');
+                $("div").addClass("important");
+
+            });
+            $("#btn2").click(function () {
+                $("h1,h2,p").removeClass('blue');
+                $("div").removeClass("important");
+
+            });
+            $("#btn3").click(function () {
+                $("h1,h2,p").toggleClass("blue");
+            });
+            $("#btn4").click(function () {
+                alert("Background color =" + $("p").css("background-color"))
+                alert(("width:") + $("p").width() + "</br>")
+            });
+            $("#btn5").click(function () {
+                $('p').css("background-color", "yellow");
+            });
+            $("#btn6").click(function () {
+                alert("html文档:" + $(document).width() + ";窗口：" + $(window).width())
+            });
+        })
+
+    </script>
+    <style type="text/css">
+        .important {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>标题1</h1>
+<h2>标题2</h2>
+<div>文本</div>
+<p style="background-color: darkgreen ">这是一个段落</p>
+<button id="btn1">增加class</button>
+<button id="btn2">删除class</button>
+<button id="btn3">切换class</button>
+<button id="btn4">获取css属性</button>
+<button id="btn5">更换css属性</button>
+<button id="btn6">返回文档和窗口的宽度</button>
+</body>
+</html>

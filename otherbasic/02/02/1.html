@@ -1,0 +1,74 @@
+<style>
+    .horizontal {
+        float: left;
+        list_style: none;
+        marign: 10px;
+    }
+
+    .sub-level {
+        background: #ccc;
+    }
+
+    a {
+        color: #00c;
+    }
+    a.mailto {
+        background: url('https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1504494117&di=795c2bdd6ca659de0aedf2d3368ad5e0&src=http://pic.58pic.com/58pic/15/47/23/99X58PICmKz_1024.png') no-repeat right top;
+        padding-right: 18px;
+    }
+    a.pdflink {
+        background-color: red;
+        padding-right: 18px;
+    }
+    a.henrylink {
+        background-color: darkgreen;
+        padding: 2px;
+        border: 1px solid #000;
+    }
+    a.external{
+        background: #fff no-repeat 100% 2px;
+        padding-right:  16px;
+    }
+</style>
+<script src="../../jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#selected-plays>li').addClass('horizontal');
+        $('#selected-plays li:not(.horizontal)').addClass('sub-level');
+        $('a[href^="mailto:"]').addClass('mailto');
+        $('a[href$=".pdf"]').addClass('pdflink');
+        $('a[href^="http"][href*="henry"]').addClass('henrylink');
+        $('a').filter(function () {
+            return this.hostname && this.hostname != location.hostname;
+        }).addClass('external')
+    })
+</script>
+<ul id="selected-plays">
+    <li>Comedies
+        <ul>
+            <li><a href="/asyoulikeit/">As You Like It</a></li>
+            <li>All's Well That Ends Well</li>
+            <li>A Midsummer Night's Dream</li>
+            <li>Twelfth Night</li>
+        </ul>
+    </li>
+    <li>Tragedies
+        <ul>
+            <li><a href="hamlet.pdf">Hamlet</a></li>
+            <li>Macbeth</li>
+            <li>Romeo and Juliet</li>
+        </ul>
+    </li>
+    <li>Histories
+        <ul>
+            <li>Henry IV (<a href="mailto:henryiv@king.co.uk">email</a>)
+                <ul>
+                    <li>Part I</li>
+                    <li>Part II</li>
+                </ul>
+            <li><a href="http://www.shakespeare.co.uk/henryv.htm">
+                Henry V</a></li>
+            <li>Richard II</li>
+        </ul>
+    </li>
+</ul>

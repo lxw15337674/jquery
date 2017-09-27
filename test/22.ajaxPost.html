@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../otherbasic/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.post("test.asp",
+                    {
+                        name:"Donald Duck",
+                        city:"Duckburg"
+                    },
+                    function(data,status){
+                        alert("数据：" + data + "\n状态：" + status);
+                    });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Post请求</button>
+</body>
+</html>

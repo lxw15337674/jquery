@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../otherbasic/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".flip").click(function () {
+                $(".panel").slideToggle("slow");
+            })
+        })
+    </script>
+
+</head>
+<body>
+<div class="panel">
+    <p>W3School - 领先的 Web 技术教程站点</p>
+    <p>在 W3School，你可以找到你所需要的所有网站建设教程。</p>
+</div>
+
+<p class="flip">请点击这里</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../otherbasic/jquery-3.2.1.min.js"></script>
+    <script language="javascript">
+        if(typeof jQuery == 'undefined'){
+            window.alert("没有jquery");
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").css("background-color","red")
+            })
+        })
+    </script>
+</head>
+<body>
+<h2>heading</h2>
+    <p>lol</p>
+<p>233</p>
+<button type="button">click</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../otherbasic/jquery-3.2.1.min.js"></script>
+    <script language="javascript">
+        if (typeof jQuery == 'undefined') {
+            window.alert("没有jquery");
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#show").click(function () {
+                $("p").show(500)
+            });
+            $("#hide").click(function () {
+                $("p").hide(500)
+            });
+            $("#toggle").click(function () {
+                $('p').toggle(300)
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+<h2>this is heading</h2>
+<p>lixiwang</p>
+<button id="hide">hide</button>
+<button id="show">show</button>
+<button id="toggle">toggle</button>
+</body>
+</html>

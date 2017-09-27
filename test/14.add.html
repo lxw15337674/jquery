@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../otherbasic/jquery-3.2.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").append("something appended")
+            });
+            $("#btn2").click(function () {
+                $("p").prepend("something prepend")
+            });
+            $("#btn3").click(function () {
+                var txt1 = "<p>Text</p>"; //以html创建
+                var txt2 = $("p").text("jquery");//jquery创建
+                var txt3 = document.createElement("p");
+                txt3.innerHTML = "js.";
+                $("p").append(txt1, txt2, txt3);
+            });
+            $("#btn4").click(function () {
+                $('p').before("<b>Before</b>")
+            })
+            $("#btn5").click(function () {
+                $('p').after("<i>after</i>")
+            })
+            $("#btn6").click(function () {
+                $('p').remove()
+            })
+            $("#btn7").click(function () {
+                $('p').empty()
+            })
+            $("#btn8").click(function () {
+                $('a').remove(".lol")
+            })
+        })
+    </script>
+</head>
+<body>
+<p>wtf<a class="lol" href="www.baidu.com">baidu</a></p>
+<button id="btn1">结尾插入</button>
+<button id="btn2">开头插入</button>
+<button id="btn3">添加新元素</button>
+<button id="btn4">前面添加文本</button>
+<button id="btn5">后面添加文本</button>
+<button id="btn6">删除元素</button>
+<button id="btn7">清空子元素</button>
+<button id="btn8">删除p中的a元素</button>
+</body>
+</html>
